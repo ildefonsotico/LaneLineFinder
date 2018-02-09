@@ -36,27 +36,21 @@ The fifth step is transform the edges found by Canny from cartesian space to Hou
 The Seventh step was to combine the lines found by Hough algorithm onto the original image. The final results is a original image overlaped by the lane lines detected with a transparency. 
 
 [image4]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
-![alt text][image4][image2][image3]
+![alt text][image4]
 
-
-My pipeline consisted of 5 steps. First, I converted the images to grayscale.
-
-then I .... 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+One potential shortcoming would be what happen the Canny found a lot of edges too close and with the same size. It makes the pipeline found false positves.
 
-One potential shortcoming would be what would happen when ... 
+Another shortcoming could be too much noises in different types of road, causing frequently the noise detection as being part of the lane lines detection. 
 
-Another shortcoming could be ...
+Other shortcoming could be the poligon made to find the region of the interest does not be enough for all cases in a real driving on the road. 
+
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to allow all parameters being configured by a standard file settings or something like that.
 
-Another potential improvement could be to ...
+Another potential improvement could be to make the pipeline more dynamic, allowing it redefine the region of the interest and parameters as fast as needed to be more assertive along the lane lines detection.
