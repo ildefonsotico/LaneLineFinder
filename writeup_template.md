@@ -36,7 +36,7 @@ The fifth step is transform the edges found by Canny from cartesian space to Hou
 The Seventh step was to combine the lines found by Hough algorithm onto the original image. The final results is a original image overlaped by the lane lines detected with a transparency. 
 
 [image4]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
-![alt text][image4]
+![alt text][image4][image2][image3]
 
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale.
