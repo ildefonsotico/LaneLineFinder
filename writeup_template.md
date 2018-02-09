@@ -54,3 +54,5 @@ Other shortcoming could be the poligon made to find the region of the interest d
 A possible improvement would be to allow all parameters being configured by a standard file settings or something like that.
 
 Another potential improvement could be to make the pipeline more dynamic, allowing it redefine the region of the interest and parameters as fast as needed to be more assertive along the lane lines detection.
+
+It could be very usefull to improve the Kernel size of the Blur Gaussian Filter according differents types of road, colors, straigth or curve, etc. I realized depending whith image is, the kernel can put in or out noise according with its size.
