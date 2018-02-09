@@ -1,11 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
@@ -24,13 +18,15 @@ The goals / steps of this project are the following:
 My pipeline consisted of 6 steps. The steps were tested with all images provided. 
 First I converted each image to be a gray scale image.
 
-[image1]: ./project_output/images/solidWhiteCurve_grayscale.jpeg "SolidWhiteCurve"
+[image2]: ./project_output/images/solidWhiteCurve_grayscale.jpeg "SolidWhiteCurve"
+![alt text][image2]
 
 Second I created a Gaussian Blur filter with a Kernel = 9.
 
 The third step consisted in apply a Canny Algorith on the Gray image created. The algorithm take in care two important parameters. The low_threshold = 60 and high_threshold = 180 in a ratio 1:3. These values allow algorithm find better when occurred a change. The values set were the best fit for all images. 
 The purpose of the Canny algorithm is to find the Edges of the image. It also take in care the filter passed by Gaussian Blur to drop strugles, noise, etc. 
-[image1]: ./project_output/images/solidWhiteCurve_canny.jpeg "Canny"
+
+[image3]: ./project_output/images/solidWhiteCurve_canny.jpeg "Canny"
 
 The next step was to make a poligon with 4 vertices. This poligon was used to find lane lines just into the region of interest. 
 
@@ -38,7 +34,7 @@ The fifth step is transform the edges found by Canny from cartesian space to Hou
 
 The Seventh step was to combine the lines found by Hough algorithm onto the original image. The final results is a original image overlaped by the lane lines detected with a transparency. 
 
-[image1]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
+[image4]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
 
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale.
