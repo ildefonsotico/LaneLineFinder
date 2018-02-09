@@ -27,6 +27,7 @@ The third step consisted in apply a Canny Algorith on the Gray image created. Th
 The purpose of the Canny algorithm is to find the Edges of the image. It also take in care the filter passed by Gaussian Blur to drop strugles, noise, etc. 
 
 [image3]: ./project_output/images/solidWhiteCurve_canny.jpeg "Canny"
+![alt text][image3]
 
 The next step was to make a poligon with 4 vertices. This poligon was used to find lane lines just into the region of interest. 
 
@@ -35,6 +36,7 @@ The fifth step is transform the edges found by Canny from cartesian space to Hou
 The Seventh step was to combine the lines found by Hough algorithm onto the original image. The final results is a original image overlaped by the lane lines detected with a transparency. 
 
 [image4]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
+![alt text][image4]
 
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale.
@@ -44,9 +46,6 @@ then I ....
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
 
 ### 2. Identify potential shortcomings with your current pipeline
 
