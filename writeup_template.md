@@ -45,7 +45,7 @@ First I filtered all lines found by your side - Left or Right. To do it was used
 
 The second step was to get a linear regression. The polynomial found describes how the line could be fittable with all points used. The polynomial was used to found the newest points of the new line that will be plotted.
 
-[image4]: ./project_output/images/linear_regression.png "Linear Regression"
+[image5]: ./project_output/images/linear_regression.png "Linear Regression"
 ![alt text][image5]
 
 It was implemented two functions, one to find F(x) and another to find F(y) as well. They were used to find X axis from a y axis. The y axis used was the bottom of the image represented as a imshape. 
