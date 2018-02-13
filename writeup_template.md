@@ -41,12 +41,16 @@ The Seventh step was to combine the lines found by Hough algorithm onto the orig
 ## Improvements of the Drawn Lines
 In order to reach a best way to overlaped the lane lines found on the road I did some modifications into the function that handle it "draw_lines".
 
-First I filtered all lines found by your side - Left or Right. To do it it was used the slope of each one of the lines. The slopes can be used to tell which side actually each lines are from. Negative value means lines is from left side. Positive value means is from right side.
+First I filtered all lines found by your side - Left or Right. To do it was used the slope of each one of the lines. The slopes can be used to tell which side actually each lines are from. Negative value means lines is from left side. Positive value means is from right side.
 
-the second step made into the function is to fit a linear regression. The polynomial found describes how the line could be fittable with all points used. The polynomial was used to found the points of the new line that will make.
-It was implemented two function to find F(x) and F(y) as well. They were used to find X axis from a y axis. The y axis used was the botton of the image representes as a imshape. 
+The second step was to get a linear regression. The polynomial found describes how the line could be fittable with all points used. The polynomial was used to found the newest points of the new line that will be plotted.
 
-A complementary steps was made. It was made a median_filter to filter noises. It scroll through a vector of slopes, looking for slopes could be higher than a threshold. It was used +- 15%.
+[image4]: ./project_output/images/linear_regression.png "Linear Regression"
+![alt text][image5]
+
+It was implemented two functions, one to find F(x) and another to find F(y) as well. They were used to find X axis from a y axis. The y axis used was the bottom of the image represented as a imshape. 
+
+A complementary steps was made. It was made a median_filter to filter noises. It scrolls through a vector of slopes, looking for slopes could be higher than a threshold. It was used +- 15%.
 
 
 ### 2. Identify potential shortcomings with your current pipeline
@@ -56,6 +60,8 @@ One potential shortcoming would be what happen the Canny found a lot of edges to
 Another shortcoming could be too much noises in different types of road, causing frequently the noise detection as being part of the lane lines detection. 
 
 Other shortcoming could be the polygon made to find the region of the interest does not be enough for all cases in a real driving on the road. 
+
+Perhaps the technique of use a threshold for the slopes could not be suitable with all cases. It could be good use other techniques like a middle point of the picture or something like that.
 
 
 
