@@ -38,7 +38,7 @@ The Seventh step was to combine the lines found by Hough algorithm onto the orig
 [image4]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
 ![alt text][image4]
 
-##Improvements of the Drawn Lines
+## Improvements of the Drawn Lines
 In order to reach a best way to overlaped the lane lines found on the road I did some modifications into the function that handle it "draw_lines".
 
 First I filtered all lines found by your side - Left or Right. To do it it was used the slope of each one of the lines. The slopes can be used to tell which side actually each lines are from. Negative value means lines is from left side. Positive value means is from right side.
