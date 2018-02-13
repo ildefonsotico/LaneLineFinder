@@ -38,6 +38,16 @@ The Seventh step was to combine the lines found by Hough algorithm onto the orig
 [image4]: ./project_output/images/solidWhiteCurve_combination.jpeg "Combination"
 ![alt text][image4]
 
+##Improvements of the Drawn Lines
+In order to reach a best way to overlaped the lane lines found on the road I did some modifications into the function that handle it "draw_lines".
+
+First I filtered all lines found by your side - Left or Right. To do it it was used the slope of each one of the lines. The slopes can be used to tell which side actually each lines are from. Negative value means lines is from left side. Positive value means is from right side.
+
+the second step made into the function is to fit a linear regression. The polynomial found describes how the line could be fittable with all points used. The polynomial was used to found the points of the new line that will make.
+It was implemented two function to find F(x) and F(y) as well. They were used to find X axis from a y axis. The y axis used was the botton of the image representes as a imshape. 
+
+A complementary steps was made. It was made a median_filter to filter noises. It scroll through a vector of slopes, looking for slopes could be higher than a threshold. It was used +- 15%.
+
 
 ### 2. Identify potential shortcomings with your current pipeline
 
